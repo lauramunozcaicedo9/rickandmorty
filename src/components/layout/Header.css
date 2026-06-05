@@ -1,0 +1,23 @@
+header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .64rem 1.5rem;
+}
+
+header img{
+    width: 40px;
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(50vh - 60px);
+}
+
+.hero h1{
+    font-size: 5.625rem;
+    font-weight: 900;
+    color: #202329;
+}

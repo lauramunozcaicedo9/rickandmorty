@@ -1,0 +1,119 @@
+.card{
+    width: 600px;
+    height: 220px;
+    max-width: 600px;
+    display: flex;
+    background-color: #3c3e44;
+    border-radius: 0.5rem;
+    margin: .75rem;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
+    position: relative;
+    cursor: pointer;
+}
+
+.card-image{
+    width: 230px;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.card-info{
+    padding:1rem;
+    display:  flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h2{
+    font-weight: 800;
+}
+
+.card p{
+    font-size: 15px;
+}
+
+.card .subtitle{
+    color: gray;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.card-info__status{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.card-info p, .card-info span, .card-info h2{
+ color: white;
+}
+
+span{
+    text-transform: capitalize;
+}
+
+.indicator{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin: 0 .5rem 0 0;
+    background-color: gray;
+}
+
+.indicator.Alive{
+    background-color: #55cc44;
+}
+.indicator.Dead{
+    background-color: #d63d2e;
+}
+
+.card .card-tooltip{
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    right: 0;
+    width: calc(100% - 230px);
+    height: 0;
+    border-top-right-radius: .75rem;
+    border-bottom-right-radius: .75rem;
+    transition: all .5s;
+}
+
+.card .card-tooltip .card-tooltip__info{
+    padding: 1rem;
+    position: relative;
+    height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: -11;
+    transition-property: opacity;
+    transition-duration: .5s;
+    transition-delay: .6s;
+    opacity: 0;
+}
+
+
+
+.card:hover .card-tooltip{
+    height: 100%;
+}
+
+.card:hover .card-tooltip .card-tooltip__info{
+    z-index: 0;
+    opacity: 1;
+}
+
+.same-line{
+    display: flex;
+    align-items: end;
+}
+
+.same-line div{
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+
